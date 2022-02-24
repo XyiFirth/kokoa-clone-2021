@@ -1,0 +1,53 @@
+.welcome-header {
+  margin: 90px 0px 90px 0px;
+  text-align: center; /*display: flex를 해도 되지만, text(inline)을 다루므로 text-aliign: center*/
+  display: flex; /*__text의 wwidth 설정->block처리가 됨-> display: flex*/
+  flex-direction: column; /*flex-direction: column을 통헤 주축으로 늘여놓았던 elements를 상하로 배치*/
+  align-items: center; /*축이 바뀌었기 때문에 axis축인 aligm-items: center로 설정 */
+  font-weight: 600;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7; /*회색깔의 text를 위해 설정*/
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  border: none;
+  background-color: aliceblue;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+} /*submit이 아닌 경우에 대해서 border-bottom, border-color transition 적용*/
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  /*atturiubute selector*/
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none; /*기본 링크에 걸려있는 밑줄 제거*/
+  color: inherit; /*inherit: 부모의 속성을 따른다.*/
+  font-size: 13px;
+}
