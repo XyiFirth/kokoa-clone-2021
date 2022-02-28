@@ -1,5 +1,5 @@
 .welcome-header {
-  padding: 90px 0px; /*Collapse margin효과 때문에 paddig사용!*/
+  padding: 90px 0px; /*Collapse margin효과 때문에 paddig사용*/
   text-align: center; /*display: flex를 해도 되지만, text(inline)을 다루므로 text-aliign: center*/
   display: flex; /*__text의 width 설정->block처리가 됨-> display: flex*/
   flex-direction: column; /*flex-direction: column을 통헤 주축으로 늘여놓았던 elements를 상하로 배치*/
