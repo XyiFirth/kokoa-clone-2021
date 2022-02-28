@@ -21,15 +21,6 @@
   color: #2e363e;
 }
 .nav__notification {
-  background-color: tomato;
-  height: 30px;
-  width: 30px;
-  border-radius: 15px; /*height,width의 절반*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 600;
   position: absolute;
   left: 15px;
   bottom: 15px;
