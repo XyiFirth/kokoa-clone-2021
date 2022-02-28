@@ -28,7 +28,12 @@
 .user-component__subtitle {
   margin-top: 8px;
   font-size: 17px;
-  color: var(--font-color-gray)
+  color: var(--font-color-gray);
+  display: flex;
+}
+.user-component__subtitle i {
+  margin-left: 5px;
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .user-component__title--not-bold {
@@ -44,3 +49,4 @@
   display: block;
   margin-bottom: 10px;
 }
+
