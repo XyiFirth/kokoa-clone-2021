@@ -1,0 +1,162 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 400vh;
+}
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  background-color: #abc1d1; /*올라가는 chat 안보이게 하기*/
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.main-chat {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  animation: fadeIn 0.5s linear;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 15px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+.message__author {
+  display: block; /*margin을 넣어주기 위해*/
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__bubble {
+  background-color: white;
+  padding: 12px;
+  border-radius: 15px;
+  border-top-left-radius: 0px; /*bubble 꼭짓점 주기*/
+  margin-right: 5px;
+  font-size: 18px;
+}
+.message__author,
+.message__time {
+  opacity: 0.8;
+}
+.message-row--own {
+  justify-content: flex-end; /*message 우측 끝으로 보내기*/
+}
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+.message-row--own .message__info {
+  flex-direction: row-reverse; /*순서 바꾸기!!!*/
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply i {
+  opacity: 0.5;
+}
+.reply input {
+  padding: 10px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+}
+.reply__column:last-child > i {
+  top: 18px;
+  right: 42px;
+}
+.reply__column button i {
+  opacity: 1;
+}
+.reply__column button {
+  border: var(--main-border);
+  border-radius: 50%;
+  background-color: var(--yellow);
+  width: 30px;
+  height: 30px;
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+.reply:focus-within input {
+  width: 95vw;
+  transform: translateX(-12%) translateY(-80px);
+  border-color: var(--yellow);
+}
+.reply:focus-within {
+  transform: translateY(80px);
+}

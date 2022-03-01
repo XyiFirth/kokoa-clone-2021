@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   padding: 5px 3px;
+  position: fixed;
+  top: 0px; /*chat에서 2가지 모두 고정해야 하므로 top:0px로 최상단에 위치 고정*/
 }
 .status-bar__column {
   width: 33%;

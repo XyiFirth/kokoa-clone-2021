@@ -10,12 +10,16 @@
 @import "components/user-component.css";
 @import "components/badge.css";
 @import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
 
 /*Screens*/
 @import "screens/login.css";
 @import "screens/friends.css";
 @import "screens/find.css";
 @import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -23,5 +27,7 @@ body {
   color: #2e363e; /*body내 text컬러 통일*/
 }
 .main-screen {
-  margin: var(--horizontal-space);
+  padding: var(
+    --horizontal-space
+  ); /*margin이 아닌 padding을 주기!(border 내리기)*/
 }
